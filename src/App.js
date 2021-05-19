@@ -1,9 +1,12 @@
 import "./App.css";
+import Front from "./Front";
+import Body from "./Body";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <Front />
+      <Body />
     </div>
   );
 }
