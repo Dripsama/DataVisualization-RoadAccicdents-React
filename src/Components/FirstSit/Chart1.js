@@ -27,6 +27,8 @@ class CustomizedAxisTick extends PureComponent {
 }
 
 export default function Chart1() {
+  const value = "2013";
+
   return (
     <div className="Chart1">
       <ResponsiveContainer width="100%" height="100%">
@@ -51,7 +53,7 @@ export default function Chart1() {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="2013" barSize={30} fill="#8884d8" />
+          <Bar dataKey={value} barSize={30} fill="#8884d8" />
         </BarChart>
       </ResponsiveContainer>
     </div>

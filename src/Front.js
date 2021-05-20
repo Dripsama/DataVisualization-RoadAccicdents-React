@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Front() {
   return (
-    <div>
+    <div className="Front">
       <h1>This is the front page</h1>
     </div>
   );
