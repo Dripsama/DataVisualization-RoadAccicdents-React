@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import {
   LineChart,
   Line,
@@ -63,40 +63,38 @@ const CreateData = (value) => {
   return newdata;
 };
 
-export default class Line3 extends PureComponent {
-  render() {
-    const value = "Delhi";
-    let data_state = CreateData(value);
-    return (
-      <div className="Line3">
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart
-            width={500}
-            height={300}
-            data={data_state}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="time" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Line
-              type="monotone"
-              dataKey={value}
-              stroke="#8884d8"
-              activeDot={{ r: 8 }}
-              strokeWidth={2}
-            />
-            {/* <Line type="monotone" dataKey="All States" stroke="#8884d8" /> */}
-          </LineChart>
-        </ResponsiveContainer>
-      </div>
-    );
-  }
+export default function Line3() {
+  const value = "All States";
+  let data_state = CreateData(value);
+  return (
+    <div className="Line3">
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart
+          width={500}
+          height={300}
+          data={data_state}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="time" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line
+            type="monotone"
+            dataKey={value}
+            stroke="#8884d8"
+            activeDot={{ r: 8 }}
+            strokeWidth={2}
+          />
+          {/* <Line type="monotone" dataKey="All States" stroke="#8884d8" /> */}
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
+  );
 }

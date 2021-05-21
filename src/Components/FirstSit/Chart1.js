@@ -27,7 +27,7 @@ class CustomizedAxisTick extends PureComponent {
 }
 
 export default function Chart1() {
-  const value = "2013";
+  const value = "2014";
 
   return (
     <div className="Chart1">
