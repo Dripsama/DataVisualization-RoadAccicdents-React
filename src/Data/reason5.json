@@ -1,0 +1,62 @@
+[
+  {
+    "Reason": "Fault of Driver",
+    "Total": 378992,
+    "Killed": 102878,
+    "Injured": 393340
+  },
+  {
+    "Reason": "Driver of other vehicles",
+    "Total": 20876,
+    "Killed": 5295,
+    "Injured": 16148
+  },
+  {
+    "Reason": "Fault of Pedestrian",
+    "Total": 7191,
+    "Killed": 2555,
+    "Injured": 6331
+  },
+  {
+    "Reason": "Condition of Motor Vehicle",
+    "Total": 9196,
+    "Killed": 3548,
+    "Injured": 8450
+  },
+  {
+    "Reason": "Road Condition",
+    "Total": 8356,
+    "Killed": 3463,
+    "Injured": 7496
+  },
+  {
+    "Reason": "Weather Condition",
+    "Total": 5961,
+    "Killed": 2554,
+    "Injured": 5477
+  },
+  {
+    "Reason": "Fault of Passenger",
+    "Total": 6721,
+    "Killed": 2678,
+    "Injured": 6101
+  },
+  {
+    "Reason": "Poor light",
+    "Total": 4210,
+    "Killed": 1802,
+    "Injured": 4394
+  },
+  {
+    "Reason": "Falling of boulders",
+    "Total": 1664,
+    "Killed": 744,
+    "Injured": 1988
+  },
+  {
+    "Reason": "Other causes",
+    "Total": 29463,
+    "Killed": 10901,
+    "Injured": 27529
+  }
+]
