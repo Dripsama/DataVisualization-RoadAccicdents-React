@@ -1,0 +1,102 @@
+[
+  {
+    "Road": "Surfaced Roads",
+    "Value": 342149
+  },
+  {
+    "Road": "Metalled Roads",
+    "Value": 84851
+  },
+  {
+    "Road": "Kutcha Roads",
+    "Value": 53777
+  },
+  {
+    "Road": "Dry road",
+    "Value": 404654
+  },
+  {
+    "Road": "Wet road",
+    "Value": 76123
+  },
+  {
+    "Road": "Good surface",
+    "Value": 330802
+  },
+  {
+    "Road": "Kutcha Roads",
+    "Value": 53777
+  },
+  {
+    "Road": "Loose Surface",
+    "Value": 28947
+  },
+  {
+    "Road": "Rutted/Pot holes",
+    "Value": 11106
+  },
+  {
+    "Road": "Road under repair/construction",
+    "Value": 12177
+  },
+  {
+    "Road": "Corrugated/Wavy road",
+    "Value": 4512
+  },
+  {
+    "Road": "Slippery surface",
+    "Value": 6113
+  },
+  {
+    "Road": "Snowy",
+    "Value": 1116
+  },
+  {
+    "Road": "Muddy",
+    "Value": 4027
+  },
+  {
+    "Road": "Oily",
+    "Value": 1767
+  },
+  {
+    "Road": "Speed breaker",
+    "Value": 11008
+  },
+  {
+    "Road": "Others",
+    "Value": 69202
+  },
+  {
+    "Road": "Straight Roads",
+    "Value": 370405
+  },
+  {
+    "Road": "Slight Curves",
+    "Value": 72283
+  },
+  {
+    "Road": "Sharp Curves",
+    "Value": 38089
+  },
+  {
+    "Road": "Flat Roads",
+    "Value": 387511
+  },
+  {
+    "Road": "Gentle Inclines",
+    "Value": 48183
+  },
+  {
+    "Road": "Steep Inclines",
+    "Value": 20519
+  },
+  {
+    "Road": "Humps",
+    "Value": 13449
+  },
+  {
+    "Road": "Dips",
+    "Value": 11115
+  }
+]
