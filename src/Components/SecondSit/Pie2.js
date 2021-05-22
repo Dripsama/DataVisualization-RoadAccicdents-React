@@ -98,7 +98,7 @@ export default class Pie2 extends PureComponent {
   render() {
     return (
       <div className="Pie2">
-        <PieChart width={1000} height={400}>
+        <PieChart width={750} height={400}>
           <Pie
             activeIndex={this.state.activeIndex}
             activeShape={renderActiveShape}
@@ -110,7 +110,7 @@ export default class Pie2 extends PureComponent {
             onMouseEnter={this.onPieEnter}
           />
         </PieChart>
-        <PieChart width={1000} height={400}>
+        <PieChart width={750} height={400}>
           <Pie
             activeIndex={this.state.activeIndex}
             activeShape={renderActiveShape}

@@ -8,7 +8,9 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import React, { PureComponent } from "react";
+import React, { PureComponent, useState } from "react";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 
 let data = require("../../Data/statedata.json");
 
@@ -27,10 +29,36 @@ class CustomizedAxisTick extends PureComponent {
 }
 
 export default function Chart1() {
-  const value = "2014";
+  const options = [
+    "2003",
+    "2004",
+    "2005",
+    "2006",
+    "2007",
+    "2008",
+    "2009",
+    "2010",
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+  ];
 
+  const [value, setValue] = useState("2010");
+  const defaultOption = options[0];
+
+  const handleChange = (val) => {
+    setValue(val.value);
+  };
   return (
     <div className="Chart1">
+      <h2>Presentation of number of road accidents State-wise</h2>
+      <Dropdown
+        options={options}
+        onChange={handleChange}
+        value={defaultOption}
+        placeholder="Select an option"
+      />
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           width={500}

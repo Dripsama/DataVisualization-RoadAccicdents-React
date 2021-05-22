@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   LineChart,
   Line,
@@ -9,6 +9,8 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 
 let data = require("../../Data/monthwise.json");
 
@@ -68,12 +70,37 @@ const CreateData = (value) => {
 };
 
 export default function Line4() {
-  let value = 2014;
-  let new_data = CreateData(value);
+  const options = [
+    "2003",
+    "2004",
+    "2005",
+    "2006",
+    "2007",
+    "2008",
+    "2009",
+    "2010",
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+  ];
 
+  const [value, setValue] = useState("2010");
+  const defaultOption = options[0];
+
+  const handleChange = (val) => {
+    setValue(val.value);
+  };
+  let new_data = CreateData(value);
   return (
     <div>
       <div className="Line4">
+        <Dropdown
+          options={options}
+          onChange={handleChange}
+          value={defaultOption}
+          placeholder="Select an option"
+        />
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
             width={500}
@@ -87,7 +114,7 @@ export default function Line4() {
             }}
           >
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="month" />
+            <XAxis dataKey="month" interval={0} />
             <YAxis />
             <Tooltip />
             <Legend />

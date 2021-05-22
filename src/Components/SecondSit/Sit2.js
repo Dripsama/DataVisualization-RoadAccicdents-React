@@ -10,8 +10,8 @@ export default function Sit2() {
         Situation 2: Explore the types of casualties incurred due to road
         accidents
       </h1>
-      <h2>Dropdown: value props</h2>
       <Chart2 />
+      <br />
       <Pie2 />
     </div>
   );
