@@ -8,8 +8,6 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
-  ResponsiveContainer,
 } from "recharts";
 import { scaleOrdinal } from "d3-scale";
 import { schemeCategory10 } from "d3-scale-chromatic";
@@ -55,8 +53,8 @@ class CustomizedAxisTick extends PureComponent {
 }
 export default function Sit7() {
   return (
-    <div>
-      <h1>This is Sit7</h1>
+    <div className="Sit7">
+      <h1>Explore road conditions during Road accidents</h1>
       <BarChart
         width={1400}
         height={600}

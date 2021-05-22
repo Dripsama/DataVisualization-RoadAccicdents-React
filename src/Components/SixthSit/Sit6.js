@@ -4,8 +4,10 @@ import Bar6 from "./Bar6";
 
 export default function Sit6() {
   return (
-    <div>
-      <h1>This is 6th Situation</h1>
+    <div className="Sit6">
+      <h1>
+        Situation 6: Analyse influence of weather conditions on Road accidents
+      </h1>
       <Bar6 />
     </div>
   );

@@ -1,8 +1,12 @@
+.Sit2 {
+  width: 1500px;
+}
 .Chart2 {
-  width: 1700px;
+  width: 1400px;
   height: 700px;
 }
 
 .Pie2 {
   display: flex;
+  margin-top: 50px;
 }
