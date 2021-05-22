@@ -10,12 +10,12 @@ import Sit7 from "./Components/SeventhSit/Sit7";
 export default function Body() {
   return (
     <div className="Body">
-      {/* <Sit1 /> */}
-      {/* <Sit2 /> */}
-      {/* <Sit3 /> */}
-      {/* <Sit4 /> */}
-      {/* <Sit5 /> */}
-      {/* <Sit6 /> */}
+      <Sit1 />
+      <Sit2 />
+      <Sit3 />
+      <Sit4 />
+      <Sit5 />
+      <Sit6 />
       <Sit7 />
     </div>
   );

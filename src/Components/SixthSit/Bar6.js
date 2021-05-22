@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React, { PureComponent, useState } from "react";
 import {
   BarChart,
   Bar,
@@ -9,6 +9,8 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 
 let data = require("../../Data/sit6.json");
 class CustomizedAxisTick extends PureComponent {
@@ -26,9 +28,34 @@ class CustomizedAxisTick extends PureComponent {
 }
 
 export default function Bar6() {
-  const value = "Cloudy";
+  const options = [
+    "Fine",
+    "Cloudy",
+    "Light rain",
+    "Heavy rain",
+    "Flooding",
+    "Hail/sleet",
+    "snow",
+    "Strong wind",
+    "Dust storm",
+    "Very hot",
+    "Very cold",
+  ];
+
+  const [value, setValue] = useState("Cloudy");
+  const defaultOption = options[0];
+
+  const handleChange = (val) => {
+    setValue(val.value);
+  };
   return (
     <div className="Bar6">
+      <Dropdown
+        options={options}
+        onChange={handleChange}
+        value={defaultOption}
+        placeholder="Select an option"
+      />
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           width={500}

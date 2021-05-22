@@ -8,7 +8,9 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import React, { PureComponent } from "react";
+import React, { PureComponent, useState } from "react";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 
 let data = require("../../Data/casualities2.json");
 
@@ -27,9 +29,22 @@ class CustomizedAxisTick extends PureComponent {
 }
 
 export default function Chart2() {
-  const year = "2014";
+  const options = ["2014", "2015", "2016", "2017"];
+
+  const [value, setValue] = useState("2014");
+  const defaultOption = options[0];
+
+  const handleChange = (val) => {
+    setValue(val.value);
+  };
   return (
     <div className="Chart2">
+      <Dropdown
+        options={options}
+        onChange={handleChange}
+        value={defaultOption}
+        placeholder="Select an option"
+      />
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           width={500}
@@ -52,9 +67,9 @@ export default function Chart2() {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey={`Killed${year}`} barSize={30} fill="#8884d8" />
-          <Bar dataKey={`Injured${year}`} barSize={30} fill="#82ca9d" />
-          <Bar dataKey={`Total${year}`} barSize={30} fill="#84a4d8" />
+          <Bar dataKey={`Killed${value}`} barSize={30} fill="#8884d8" />
+          <Bar dataKey={`Injured${value}`} barSize={30} fill="#82ca9d" />
+          <Bar dataKey={`Total${value}`} barSize={30} fill="#84a4d8" />
         </BarChart>
       </ResponsiveContainer>
     </div>

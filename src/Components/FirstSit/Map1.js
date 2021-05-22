@@ -2,34 +2,14 @@ import React, { useState } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import { scaleQuantile } from "d3-scale";
 import ReactTooltip from "react-tooltip";
-
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 const INDIA_TOPO_JSON = require("../../Data/india.topo.json");
 let mapdata = require("../../Data/statedata.json");
 
 const PROJECTION_CONFIG = {
   scale: 350,
   center: [78.9629, 22.5937],
-};
-const LinearGradient = (props) => {
-  const { data } = props;
-  const boxStyle = {
-    width: 180,
-    margin: "auto",
-  };
-  const gradientStyle = {
-    backgroundImage: `linear-gradient(to right, ${data.fromColor} , ${data.toColor})`,
-    height: 20,
-  };
-  return (
-    <div>
-      <div style={boxStyle} className="display-flex">
-        <span>{data.min}</span>
-        <span className="fill"></span>
-        <span>{data.max}</span>
-      </div>
-      <div style={{ ...boxStyle, ...gradientStyle }} className="mt8"></div>
-    </div>
-  );
 };
 
 // Red Variants
@@ -63,15 +43,28 @@ const geographyStyle = {
 
 function Map1() {
   const [tooltipContent, setTooltipContent] = useState("");
-  const [data, setData] = useState(mapdata);
+  const data = mapdata;
 
-  const value = "2013";
+  const options = [
+    "2003",
+    "2004",
+    "2005",
+    "2006",
+    "2007",
+    "2008",
+    "2009",
+    "2010",
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+  ];
 
-  const gradientData = {
-    fromColor: COLOR_RANGE[0],
-    toColor: COLOR_RANGE[COLOR_RANGE.length - 1],
-    min: 0,
-    max: data.reduce((max, item) => (item[value] > max ? item[value] : max), 0),
+  const [value, setValue] = useState("2010");
+  const defaultOption = options[0];
+
+  const handleChange = (val) => {
+    setValue(val.value);
   };
 
   const colorScale = scaleQuantile()
@@ -88,13 +81,15 @@ function Map1() {
     setTooltipContent("");
   };
 
-  const onChangeButtonClick = () => {
-    setData(mapdata);
-  };
-
   return (
-    <div className="full-width-height container">
-      <h1 className="no-margin center">States and UTs</h1>
+    <div className="Map1">
+      <h2>Realization of road accidents State-wise as a map</h2>
+      <Dropdown
+        options={options}
+        onChange={handleChange}
+        value={defaultOption}
+        placeholder="Select an option"
+      />
       <ReactTooltip>{tooltipContent}</ReactTooltip>
       <ComposableMap
         projectionConfig={PROJECTION_CONFIG}
@@ -109,8 +104,6 @@ function Map1() {
               const current = data.find(
                 (s) => s["States/Uts"] === geo.properties.name
               );
-              console.log("This is data");
-              //   console.log(geo.properties.name);
               return (
                 <Geography
                   key={geo.rsmKey}
@@ -125,12 +118,6 @@ function Map1() {
           }
         </Geographies>
       </ComposableMap>
-      <LinearGradient data={gradientData} />
-      <div className="center">
-        <button className="mt16" onClick={onChangeButtonClick}>
-          Change
-        </button>
-      </div>
     </div>
   );
 }
