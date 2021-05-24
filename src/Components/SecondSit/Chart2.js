@@ -67,9 +67,9 @@ export default function Chart2() {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey={`Killed${value}`} barSize={30} fill="#8884d8" />
-          <Bar dataKey={`Injured${value}`} barSize={30} fill="#82ca9d" />
-          <Bar dataKey={`Total${value}`} barSize={30} fill="#84a4d8" />
+          <Bar dataKey={`Killed${value}`} barSize={30} fill="#EF7F91" />
+          <Bar dataKey={`Injured${value}`} barSize={30} fill="#F38365" />
+          <Bar dataKey={`Total${value}`} barSize={30} fill="#0D8200" />
         </BarChart>
       </ResponsiveContainer>
     </div>

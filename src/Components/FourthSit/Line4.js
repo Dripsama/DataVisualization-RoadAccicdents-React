@@ -121,7 +121,7 @@ export default function Line4() {
             <Line
               type="monotone"
               dataKey={value}
-              stroke="#8884d8"
+              stroke="#DD005D"
               activeDot={{ r: 8 }}
               strokeWidth={2}
             />
@@ -149,7 +149,7 @@ export default function Line4() {
             <Line
               type="monotone"
               dataKey="Total"
-              stroke="#8884d8"
+              stroke="#DD005D"
               activeDot={{ r: 8 }}
               strokeWidth={2}
             />

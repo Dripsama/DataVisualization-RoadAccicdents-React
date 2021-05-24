@@ -81,7 +81,7 @@ export default function Chart1() {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey={value} barSize={30} fill="#8884d8" />
+          <Bar dataKey={value} barSize={30} fill="#DD005D" />
         </BarChart>
       </ResponsiveContainer>
     </div>
