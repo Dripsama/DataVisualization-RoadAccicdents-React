@@ -88,7 +88,7 @@ export default function Line3() {
           <Line
             type="monotone"
             dataKey={value}
-            stroke="#8884d8"
+            stroke="#1C89F9"
             activeDot={{ r: 8 }}
             strokeWidth={2}
           />
