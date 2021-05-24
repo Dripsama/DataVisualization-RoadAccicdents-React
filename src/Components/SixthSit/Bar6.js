@@ -78,8 +78,8 @@ export default function Bar6() {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey={`${value} - Killed`} stackId="a" fill="#8884d8" />
-          <Bar dataKey={`${value} - Injured`} stackId="a" fill="#82ca9d" />
+          <Bar dataKey={`${value} - Killed`} stackId="a" fill="#1C89F9" />
+          <Bar dataKey={`${value} - Injured`} stackId="a" fill="#DD005D" />
         </BarChart>
       </ResponsiveContainer>
     </div>
